@@ -4,4 +4,8 @@ FactoryGirl.define do
   factory :user do
     name "MyString"
   end
+
+  factory :Kelly, class: 'User' do
+    name "Kelly"
+  end
 end
