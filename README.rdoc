@@ -1,7 +1,10 @@
 Hacker News clone
+==========
 Hacker News is a site where nerds post links to articles, vote on which ones they like best, and discuss the articles with comments. Let's make a simplified version of Hacker News.
 
 Once again, don't worry about users logging in yet - we'll get to that very soon!
+
+To begin, familiarize yourself with FactoryGirl and Capybara. We are using them for the first time and it may be overwhelming, but just take your time.
 
 Here are your stories:
 

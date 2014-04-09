@@ -1,10 +1,21 @@
-<h1>Links#index</h1>
-<p>Find me in app/views/links/index.html.erb</p>
+<h1>Links</h1>
 
-<%= link_to "New link", new_link_path, :class => "btn btn-default" %>
 
-<ul>
+<ul class="jumbotron">
   <% @links.each do |link| %>
-    <li><a href ="<%= link.url %>"><%= link.name%></a></li>
+    <li>
+      <p><%= form_for(@vote) do |f| %>
+        <% f.label :link_id %>
+        <%= f.hidden_field :link_id, value: link.id %>
+        <% f.label :user_id %>
+        <%= f.hidden_field :user_id, value: 4 %>
+        <%= f.submit(:class => "btn btn-primary", :value => "Up Vote") %>
+        <a href ="<%= link.url %>"><%= link.name%></a>
+      <% end %>
+      </p>
+    </li>
   <% end %>
 </ul>
+
+
+<%= link_to "New link", new_link_path, :class => "btn btn-default" %>
